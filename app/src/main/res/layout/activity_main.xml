@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginHorizontal="24dp"
+        app:cardElevation="16dp"
+        android:outlineAmbientShadowColor="#0277BD"
+        app:cardCornerRadius="20dp"
+        android:outlineSpotShadowColor="#0277BD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/txvCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Course:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtCourse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginStart="16dp"
+                android:hint="BBC"
+                android:inputType="none|text|textCapCharacters"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvCourse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txvCourse" />
+
+            <TextView
+                android:id="@+id/txvYOS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year of Study"
+                android:textSize="16sp"
+                android:textFontWeight="500"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/edtYOS"
+                app:layout_constraintEnd_toEndOf="@+id/txvCourse"
+                app:layout_constraintTop_toBottomOf="@id/txvCourse" />
+
+            <EditText
+                android:id="@+id/edtYOS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="2.2"
+                app:layout_constraintEnd_toEndOf="@id/edtCourse"
+                app:layout_constraintStart_toStartOf="@+id/edtCourse"
+                app:layout_constraintTop_toBottomOf="@+id/edtCourse" />
+
+            <TextView
+                android:id="@+id/txvUnitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unit name"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edtUnitName"
+                app:layout_constraintEnd_toEndOf="@+id/txvYOS" />
+
+            <EditText
+                android:id="@+id/edtUnitName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Software engineering"
+                android:inputType="textCapSentences"
+                app:layout_constraintEnd_toEndOf="@id/edtYOS"
+                app:layout_constraintStart_toStartOf="@+id/edtYOS"
+                app:layout_constraintTop_toBottomOf="@+id/edtYOS" />
+
+            <TextView
+                android:id="@+id/txvUnitCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unit code"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/edtUnitCode"
+                app:layout_constraintEnd_toEndOf="@+id/txvUnitName" />
+
+            <EditText
+                android:id="@+id/edtUnitCode"
+                android:layout_width="0dp"
+                android:hint="ICS2103"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textCapCharacters"
+                app:layout_constraintEnd_toEndOf="@id/edtUnitName"
+                app:layout_constraintStart_toStartOf="@id/edtUnitName"
+                app:layout_constraintTop_toBottomOf="@+id/edtUnitName" />
+
+            <TextView
+                android:id="@+id/txvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/edtTime"
+                app:layout_constraintEnd_toEndOf="@+id/txvUnitCode" />
+
+            <EditText
+                android:id="@+id/edtTime"
+                android:layout_width="0dp"
+                android:hint="9-11am"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/edtUnitCode"
+                app:layout_constraintStart_toStartOf="@+id/edtUnitCode"
+                app:layout_constraintTop_toBottomOf="@id/edtUnitCode" />
+
+            <TextView
+                android:id="@+id/txvTaught"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taught"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/rdgTaught"
+                app:layout_constraintEnd_toEndOf="@+id/txvTime"
+                app:layout_constraintTop_toTopOf="@id/rdgTaught" />
+
+            <RadioGroup
+                android:id="@+id/rdgTaught"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/edtTime"
+                app:layout_constraintStart_toStartOf="@id/edtTime"
+                app:layout_constraintTop_toBottomOf="@+id/edtTime">
+
+                <RadioButton
+                    android:id="@+id/rdbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rdbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="No" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnSubmit" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Submit"
+                app:layout_constraintEnd_toStartOf="@id/btnView"
+                app:layout_constraintStart_toEndOf="@+id/btnClear"
+                app:layout_constraintTop_toBottomOf="@+id/rdgTaught" />
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="View"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnSubmit" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

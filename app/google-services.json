@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "202123415226",
+    "project_id": "class-inspection",
+    "storage_bucket": "class-inspection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202123415226:android:a55d9e9fa2ba1972efbc83",
+        "android_client_info": {
+          "package_name": "com.kygocorp.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202123415226-6acab2s78ih185blcn91oiejv7chohmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlGBcgqkWLCFu9wWWcaYsctY1yjnvTpWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202123415226-6acab2s78ih185blcn91oiejv7chohmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
